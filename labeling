@@ -1,1 +1,8 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="BhJ63IemG3ACRXXxUyzC")
+project = rf.workspace("dental-decay").project("check-hfbzl-zemwx")
+version = project.version(12)
+dataset = version.download("yolov8")
 
